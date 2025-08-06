@@ -1,5 +1,3 @@
-@import url('https://fonts.google.com/specimen/Ubuntu');
-
 * {
     margin: 0;
     padding: 0;
@@ -58,13 +56,19 @@ body {
 }
 
 .container {
-    width: 65%;
-    height: 70vh;
+    width: 60%;
+    height: 75vh;
     background-color: var(--neutral-white);
     border-radius: 15px;
-    padding: 12px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
     display: flex;
+    gap: 10%;
 }
+
+
+/* Sidebar Styling */
 
 .sidebar {
     height: 100%;
@@ -107,15 +111,131 @@ body {
 
 .step-head {
     color: var(--neutral-grey-500);
-    font-size: var(--font-main);
+    font-size: var(--font-size-p);
 }
 
 .step-name {
     color: var(--neutral-white);
-    font-size: var(--font-main);
+    font-size: var(--font-size-p);
     font-weight: var(--font-weight-b);
 }
 
 .step-5 {
     display: none;
+}
+
+/* Section Styling */
+form {
+    width: 55%;
+    margin-top: 7vh;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title {
+    color: var(--primary-blue-950);
+    font-size: 2.2rem;
+}
+
+.description {
+    color: var(--neutral-grey-500);
+    font-size: var(--font-size-p);
+}
+
+.content {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    color: var(--primary-blue-950);
+    font-weight: var(--font-weight-r);
+    font-size: 16px;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: 1.3px solid #ced4da;
+    font-size: 16px;
+    color: var(--neutral-grey-500);
+    padding-left: 12px;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: var(--neutral-grey-500);
+    font-weight: var(--font-weight-r);
+}
+
+input:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+  color: var(--neutral-grey-500);
+}
+
+.section-footer {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 20px;
+}
+
+.next-button {
+    background-color: var(--primary-blue-950);
+    border: none;
+    color: var(--neutral-white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: var(--font-weight-r);
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.next-button:hover {
+    filter: brightness(1.15);
+}
+
+.next-button:active {
+    filter: brightness(0.95);
+    transform: scale(0.98);
+}
+
+@media (max-width: 1230px) {
+   .step-head, .step-name {
+        font-size: clamp(11px, 1.1vw, 16px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .step-texts {
+        display: none;
+    }
+
+    .sidebar-step {
+        justify-content: center;
+    }
+
+    .sidebar {
+        padding: 30px 0;
+    }
 }
