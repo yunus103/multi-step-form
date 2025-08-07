@@ -85,7 +85,65 @@
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
+    <div class="section" id="step-2">
+        <div class="header">
+          <h1 class="title">Select your plan</h1>
+          <p class="description">You have the option of monthly or yearly billing.
+          </p>
+      </div>
+      
+      <div class="plan-options">
+        <div class="plan-option">
+          <input type="radio" id="plan-arcade" name="plan" value="arcade">
+          <label for="plan-arcade">
+            <img src="assets/images/icon-arcade.svg" alt="Arcade Icon">
+            <div class="plan-details">
+              <h3 class="plan-title">Arcade</h3>
+              <p class="price">$9/mo</p>
+            </div>
+          </label>
+        </div>
 
+        <div class="plan-option">
+          <input type="radio" id="plan-advanced" name="plan" value="advanced">
+          <label for="plan-advanced">
+            <img src="assets/images/icon-advanced.svg" alt="Advanced Icon">
+            <div class="plan-details">
+              <h3 class="plan-title">Advanced</h3>
+              <p class="price">$12/mo</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="plan-option">
+          <input type="radio" id="plan-pro" name="plan" value="pro">
+          <label for="plan-pro">
+            <img src="assets/images/icon-pro.svg" alt="Pro Icon">
+            <div class="plan-details">
+              <h3 class="plan-title">Pro</h3>
+              <p class="price">$15/mo</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="toggle-wrapper">
+        <span class="label-text active" id="monthly-label">Monthly</span>
+        
+        <label class="toggle-switch">
+            <input type="checkbox" id="billing-toggle">
+            <span class="slider"></span>
+        </label>
+        
+        <span class="label-text" id="yearly-label">Yearly</span>
+      </div>
+
+      <div class="section-footer">
+        <button class="back-button">Go Back</button>
+        <button class="next-button" id="next">Next Step</button>
+      </div>
+
+    </div>
 
     <!-- Step 2 end -->
 
@@ -118,5 +176,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Yunus Emre Aytekin</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
