@@ -19,7 +19,7 @@
     <!-- Sidebar start -->
     <div class="sidebar">
       <div class="sidebar-step">
-        <div class="step-num active">1</div>
+        <div class="step-num active" id="side-1">1</div>
         <div class="step-texts">
           <span class="step-head">STEP 1</span>
           <h3 class="step-name">YOUR INFO</h3>
@@ -27,7 +27,7 @@
       </div>
 
       <div class="sidebar-step">
-        <div class="step-num">2</div>
+        <div class="step-num" id="side-2">2</div>
         <div class="step-texts">
           <span class="step-head">STEP 2</span>
           <h3 class="step-name">SELECT PLAN</h3>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="sidebar-step">
-        <div class="step-num">3</div>
+        <div class="step-num" id="side-3">3</div>
         <div class="step-texts">
           <span class="step-head">STEP 3</span>
           <h3 class="step-name">ADD-ONS</h3>
@@ -43,7 +43,7 @@
       </div>
 
       <div class="sidebar-step">
-        <div class="step-num">4</div>
+        <div class="step-num" id="side-4">4</div>
         <div class="step-texts">
           <span class="step-head">STEP 4</span>
           <h3 class="step-name">SUMMARY</h3>
@@ -159,7 +159,7 @@
 
       <div class="add-ons">
         <label class="add-on">
-          <input type="checkbox" name="online-service">
+          <input type="checkbox" name="addon" value="online-service">
           <span class="custom-check"></span>
           <div class="add-on-info">
             <h4 class="add-on-title">Online service</h4>
@@ -169,7 +169,7 @@
         </label>
 
         <label class="add-on">
-          <input type="checkbox" name="larger-storage">
+          <input type="checkbox" name="addon" value="larger-storage">
           <span class="custom-check"></span>
           <div class="add-on-info">
             <h4 class="add-on-title">Larger storage</h4>
@@ -179,7 +179,7 @@
         </label>
 
         <label class="add-on">
-          <input type="checkbox" name="customizable">
+          <input type="checkbox" name="addon" value="customizable">
           <span class="custom-check"></span>
           <div class="add-on-info">
             <h4 class="add-on-title">Customizable profile</h4>
@@ -211,7 +211,10 @@
         <div class="summary-content">
           <div class="summary-top">
             <div class="top-left">
-              <h3><span id="summary-plan">Arcade (Monthly)</span></h3>
+              <h3>
+                <span id="summary-plan-name">Arcade</span> 
+                (<span id="summary-period">Monthly</span>)
+              </h3>
               <a href="">Change</a>
             </div>
 
@@ -221,18 +224,18 @@
           </div>
 
           <div class="summary-bottom">
-            <p id="p-online"><span id="bottom-service">Online service</span><span class="bottom-price">+$1/mo</span></p>
+            <p id="p-online"><span id="bottom-service">Online service</span><span class="bottom-price" id="add-1">+$1/mo</span></p>
 
-            <p id="p-storage"><span id="bottom-service">Larger storage</span><span class="bottom-price">+$2/mo</span></p>
+            <p id="p-storage"><span id="bottom-service">Larger storage</span><span class="bottom-price" id="add-2">+$2/mo</span></p>
 
-            <p id="p-profile"><span id="bottom-service">Customizable profile</span><span class="bottom-price">+$2/mo</span></p>
+            <p id="p-profile"><span id="bottom-service">Customizable profile</span><span class="bottom-price" id="add-2">+$2/mo</span></p>
           </div>
         </div>
 
       </div>
 
       <div class="show-total">
-        <p><span>Total (per <span id="summary-per">month)</span></span> <span><span id="summary-price">$9/mo</span></span></p>
+        <p><span>Total</span> <span><span id="summary-price">$9/mo</span></span></p>
       </div>
 
       <div class="section-footer">

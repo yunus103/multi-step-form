@@ -492,6 +492,10 @@ input:checked + .custom-check::after {
     display: none;
 }
 
+.summary-bottom p.active {
+    display: flex;
+}
+
 .bottom-price {
     color: var(--primary-blue-950);
     font-weight: var(--font-weight-md);
