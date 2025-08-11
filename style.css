@@ -282,7 +282,6 @@ input:focus {
 
 .plan-title {
     color: var(--primary-blue-950);
-    margin-bottom: 3px;
 }
 
 .price {
@@ -292,6 +291,23 @@ input:focus {
 input[type="radio"]:checked + label {
   border-color: hsl(243, 100%, 62%); /* Your blue color */
   background-color: hsl(217, 100%, 97%); /* Your light blue background */
+}
+
+.plan-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.two-months {
+    font-size: 14px;
+    color: var(--primary-blue-950);
+    font-weight: var(--font-weight-md);
+    display: none;
+}
+
+.two-months.active {
+    display: block;
 }
 
 .toggle-wrapper {
@@ -356,6 +372,151 @@ input:checked + .slider::before {
     transform: translateX(18px);
 }
 
+/* Section 3 styling */
+
+.add-on {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--neutral-purple-200);
+    border-radius: 10px;
+    padding: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.add-on:hover {
+    border-color: var(--primary-purple-600);
+}
+
+.add-on input {
+    display: none;
+}
+
+.custom-check {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--neutral-purple-200);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+}
+
+.add-on:has(input:checked) {
+  border: 1px solid var(--primary-purple-600);
+}
+
+input:checked + .custom-check {
+    background-color: #6a5acd;
+    border-color: #6a5acd;
+}
+
+input:checked + .custom-check::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: -2px;
+  left: 3px;
+}
+
+.add-on-info {
+    flex: 1;
+}
+
+.add-on-title {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary-blue-950);
+}
+
+.add-on-info p {
+    margin-top: 1px;
+    font-size: 0.9rem;
+    color: var(--neutral-grey-500);
+}
+
+.price {
+    color: #6a5acd;
+    font-weight: var(--font-weight-md);
+}
+
+/* Step 4 */
+
+.summary {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.summary-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.2px solid #c5c5c5;
+    padding-bottom: 1rem; 
+}
+
+.top-left h3,
+.top-right {
+    color: var(--primary-blue-950);
+    font-weight: var(--font-weight-md);
+}
+
+.top-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.top-left a {
+    color: var(--neutral-grey-500);
+}
+
+.top-right {
+    font-size: 1.1rem;
+}
+
+.summary-bottom {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary-bottom p {
+    display: flex;
+    justify-content: space-between;
+    color: var(--neutral-grey-500);
+    font-size: 0.9rem;
+}
+
+.bottom-price {
+    color: var(--primary-blue-950);
+    font-weight: var(--font-weight-md);
+}
+
+.show-total {
+    padding: 0 25px;
+}
+
+#summary-price {
+    color: var(--primary-purple-600);
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-b);
+}
+
+.show-total p {
+    display: flex;
+    justify-content: space-between;
+    color: var(--neutral-grey-500);
+    font-size: var(--font-size-p);
+}
+
+.next-button.confirm {
+    background-color: var(--primary-purple-600);
+}
+
 @media (max-width: 1230px) {
    .step-head, .step-name {
         font-size: clamp(11px, 1.1vw, 16px);
@@ -373,5 +534,9 @@ input:checked + .slider::before {
 
     .sidebar {
         padding: 30px 0;
+    }
+
+    .container {
+        width: 70%;
     }
 }
