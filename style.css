@@ -489,6 +489,7 @@ input:checked + .custom-check::after {
     justify-content: space-between;
     color: var(--neutral-grey-500);
     font-size: 0.9rem;
+    display: none;
 }
 
 .bottom-price {
