@@ -2,7 +2,7 @@
 
 This is a front-end project that implements a responsive, multi-step subscription form. Users are guided through a seamless four-step process to select a plan, choose add-ons, and confirm their subscription. The form features interactive elements, client-side validation, and a dynamic summary page that updates based on user selections.
 
-# Project Link: https://yunus103.github.io/multi-step-form/
+### Project Link: https://yunus103.github.io/multi-step-form/
 
 ## ✨ Features
 
