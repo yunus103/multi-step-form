@@ -11,6 +11,13 @@ const selectedAddOns = document.querySelectorAll('input[name="addon"]');
 
 const nextButton = document.querySelectorAll('#next');
 const backButton = document.querySelectorAll('#back');
+const changeButton = document.getElementById('change-button');
+const confirmButton = document.getElementById('confirm');
+
+const nameInput = document.getElementById('name');
+const mailInput = document.getElementById('email');
+const phoneInput = document.getElementById('phone');
+
 
 let payPeriod = 1; // 1 for monthly, 2 for yearly
 let plan = 0; // 0 for Arcade, 1 for Advanced, 2 for pro
@@ -127,6 +134,29 @@ selectedAddOns.forEach(checkbox => {
     });
 });
 
+changeButton.addEventListener('click', () => {
+    const step4 = document.getElementById('step-4');
+    const step2 = document.getElementById('step-2');
+
+    step4.classList.remove('active');
+    step2.classList.add('active');
+    setSideNumber(2); 
+});
+
+confirmButton.addEventListener('click', () => {
+    if(validateInput()) {
+        const step5 = document.getElementById('step-5');
+        const step4 = document.getElementById('step-4');
+        const form = document.getElementById('form-container');
+
+        step4.classList.remove('active');
+        step5.classList.add('active');
+        form.classList.add('finished');
+    } else {
+        alert("Please fill all the fields.");
+    }
+
+});
 
 function setPlan() {
     const selectedPlan = document.querySelector('input[name="plan"]:checked');
@@ -232,4 +262,17 @@ function setSideNumber(pageIndex) {
         e.classList.remove('active');
     })
     sidePage.classList.add('active');
+}
+
+function validateInput() {
+    const nameValue = nameInput.value.trim();
+    const mailValue = mailInput.value.trim();
+    const phoneValue = phoneInput.value.trim();
+
+    if(nameValue === '' || mailValue === '' || phoneValue === '')
+    {
+        return false;
+    }
+
+    return true;
 }

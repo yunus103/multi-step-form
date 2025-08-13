@@ -54,7 +54,7 @@
 
     <!-- Step 1 start -->
 
-    <form action="/submit" method="post">
+    <form action="/submit" method="post" id="form-container">
 
     <div class="section active" id="step-1">
       <div class="header">
@@ -215,7 +215,7 @@
                 <span id="summary-plan-name">Arcade</span> 
                 (<span id="summary-period">Monthly</span>)
               </h3>
-              <a href="">Change</a>
+              <button type="button" id="change-button">Change</button>
             </div>
 
             <div class="top-right">
@@ -253,12 +253,16 @@
 
     <!-- Step 5 start -->
 
-    <div class="step-5" id="step5">
-      Thank you!
-
-      Thanks for confirming your subscription! We hope you have fun 
-      using our platform. If you ever need support, please feel free 
-      to email us at support@loremgaming.com.
+    <div class="section" id="step-5">
+      <div class="final-container">
+        <img src="assets/images/icon-thank-you.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun 
+          using our platform. If you ever need support, please feel free 
+          to email us at support@loremgaming.com.
+        </p>
+      </div>
     </div>
     <!-- Step 5 end -->
   </div>
